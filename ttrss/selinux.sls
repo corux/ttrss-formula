@@ -1,5 +1,8 @@
 {% from "ttrss/map.jinja" import ttrss with context %}
 
+include:
+  - selinux
+
 {% for dir in [ 'cache', 'feed-icons', 'lock' ] %}
 ttrss-selinux-{{ dir }}:
   cmd.run:
