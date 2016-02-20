@@ -1,0 +1,12 @@
+ttrss:
+  directory: /opt/ttrss
+  url: https://tt-rss.org/git/tt-rss.git
+  version: master
+  plugins_directory: /opt/ttrss-plugins
+  plugins:
+    auth_ldap:
+      enabled: False
+      url: https://github.com/hydrian/TTRSS-Auth-LDAP.git
+      path: plugins/auth_ldap
+      pkgs:
+        - php-pear-Net-LDAP2

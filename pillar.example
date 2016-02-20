@@ -2,9 +2,9 @@ ttrss:
   version: master
   config:
     DB_TYPE: pgsql
-    DB_HOST: db-server
-    DB_USER: tt-rss
+    DB_HOST: localhost
     DB_NAME: tt-rss
-    DB_PASS: password
+    DB_USER: tt-rss
+    DB_PASS: XXXXXX
     SELF_URL_PATH: http://localhost/tt-rss/
     PLUGINS: auth_internal, note, mail, af_unburn, share
