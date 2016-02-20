@@ -2,6 +2,7 @@
 {% set is_selinux_enabled = salt.cmd.run('sestatus') == '1' %}
 
 include:
+  - epel
   - php.ng
   - php.ng.mbstring
   - php.ng.gd
