@@ -5,6 +5,7 @@ include:
   - php.ng
   - php.ng.mbstring
   - php.ng.gd
+  - php.ng.xml
   - php.ng.{{ ttrss.get('config', {}).get('DB_TYPE', 'pgsql')|lower }}
 {% if is_selinux_enabled %}
   - .selinux
