@@ -16,10 +16,10 @@ describe command("curl -L localhost/tt-rss/install") do
   its(:stdout) { should match /config.php already exists in tt-rss directory/ }
 end
 
-describe file("/opt/ttrss-plugins/auth-ldap") do
+describe file("/opt/ttrss-plugins/auth_ldap") do
   it { should be_directory }
 end
 
-describe file("/opt/ttrss/plugins.local/auth-ldap") do
+describe file("/opt/ttrss/plugins.local/auth_ldap") do
   it { should be_symlink }
 end
