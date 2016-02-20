@@ -72,7 +72,7 @@ ttrss-config-{{ key }}:
       - service: ttrssd
 {% endfor %}
 
-{% for dir in [ '/cache', '/feed-icons', '/lock' ] %}
+{% for dir in [ 'cache', 'feed-icons', 'lock' ] %}
 ttrss-chmod-{{ dir }}:
   file.directory:
     - name: {{ ttrss.directory }}/{{ dir }}
