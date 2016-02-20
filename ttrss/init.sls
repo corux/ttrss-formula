@@ -1,5 +1,5 @@
 {% from "ttrss/map.jinja" import ttrss with context %}
-{% set is_selinux_enabled = salt.cmd.run('sestatus') == '1' %}
+{% set is_selinux_enabled = salt.cmd.retcode('selinuxenabled') == 0 %}
 
 include:
   - epel
