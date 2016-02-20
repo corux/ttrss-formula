@@ -4,7 +4,7 @@ Wants=network-online.target
 
 [Service]
 User=apache
-ExecStart=/usr/bin/php {{ config.update_daemon }}
+ExecStart=/usr/bin/php -c /etc/php-cli.ini {{ config.update_daemon }}
 Restart=always
 RestartSec=30s
 
