@@ -8,3 +8,6 @@ ttrss:
     DB_PASS: XXXXXX
     SELF_URL_PATH: http://localhost/tt-rss/
     PLUGINS: auth_internal, note, mail, af_unburn, share
+  plugins:
+    auth_ldap:
+      enabled: True

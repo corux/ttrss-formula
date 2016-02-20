@@ -15,3 +15,11 @@ describe command("curl -L localhost/tt-rss/install") do
   its(:stdout) { should match /Tiny Tiny RSS - Installer/ }
   its(:stdout) { should match /config.php already exists in tt-rss directory/ }
 end
+
+describe file("/opt/ttrss-plugins/auth-ldap")
+  it { should be_directory }
+end
+
+describe file("/opt/ttrss/plugins.local/auth-ldap")
+  it { should be_symlink }
+end
