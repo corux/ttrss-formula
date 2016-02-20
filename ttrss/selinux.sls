@@ -1,9 +1,5 @@
 {% from "ttrss/map.jinja" import ttrss with context %}
 
-policycoreutils-python:
-  pkg.installed:
-    - name: policycoreutils-python
-
 {% for dir in [ 'cache', 'feed-icons', 'lock' ] %}
 ttrss-selinux-{{ dir }}:
   cmd.run:
