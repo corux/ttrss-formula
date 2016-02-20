@@ -1,0 +1,8 @@
+name: ttrss
+os: CentOS
+os_family: RedHat
+version: 201602
+release: 1
+dependencies: apache, php
+summary: Formula for installing Tiny Tiny RSS
+description: Formula for installing Tiny Tiny RSS
