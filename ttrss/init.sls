@@ -53,6 +53,8 @@ ttrssd:
     - require:
       - git: ttrss-git
       - cmd: ttrss-config
+    - check_cmd:
+      - /bin/true
 
 ttrss-config:
   cmd.run:
