@@ -8,11 +8,6 @@ ttrss-plugins:
 {% for name, plugin in ttrss.get('plugins', {}).items() %}
 {% if plugin.get('enabled', False) %}
 ttrss-plugin-{{ name }}:
-{% if plugin.get('pkgs') %}
-  pkg.installed:
-    - pkgs: {{ plugin.pkgs }}
-{% endif %}
-
   git.latest:
     - name: {{ plugin.url }}
     - rev: {{ plugin.get('version', 'master') }}
