@@ -8,6 +8,7 @@ include:
   - php.ng.gd
   - php.ng.xml
   - php.ng.cli
+  - php.ng.mcrypt
   - php.ng.{{ ttrss.get('config', {}).get('DB_TYPE', 'pgsql')|lower }}
 {% if selinux.enabled %}
   - .selinux
