@@ -82,12 +82,15 @@ ttrss-chmod-{{ dir }}:
     - name: {{ ttrss.directory }}/{{ dir }}
     - user: apache
     - group: apache
-    - mode: 755
+    - dir_mode: 755
+    - file_mode: 644
     - recurse:
       - user
       - group
+      - mode
     - require:
       - git: ttrss-git
     - require_in:
       - service: ttrssd
 {% endfor %}
+
