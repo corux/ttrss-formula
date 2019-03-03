@@ -40,7 +40,7 @@ ttrssd:
     - source: salt://ttrss/files/ttrssd.service
     - template: jinja
     - defaults:
-        config: {{ ttrss }}
+        config: {{ ttrss|json }}
 
   module.wait:
     - name: service.systemctl_reload

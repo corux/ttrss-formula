@@ -9,6 +9,6 @@ ttrss-apache:
     - source: salt://ttrss/files/ttrss-apache.conf
     - template: jinja
     - defaults:
-        config: {{ ttrss }}
+        config: {{ ttrss|json }}
     - watch_in:
       - module: apache-reload
