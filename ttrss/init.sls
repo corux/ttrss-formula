@@ -3,13 +3,13 @@
 
 include:
   - epel
-  - php.ng
-  - php.ng.mbstring
-  - php.ng.gd
-  - php.ng.xml
-  - php.ng.cli
-  - php.ng.mcrypt
-  - php.ng.{{ ttrss.get('config', {}).get('DB_TYPE', 'pgsql')|lower }}
+  - php
+  - php.mbstring
+  - php.gd
+  - php.xml
+  - php.cli
+  - php.mcrypt
+  - php.{{ ttrss.get('config', {}).get('DB_TYPE', 'pgsql')|lower }}
 {% if selinux.enabled %}
   - .selinux
 {% endif %}
