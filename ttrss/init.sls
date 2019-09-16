@@ -23,6 +23,7 @@ ttrss-git:
     - name: {{ ttrss.url }}
     - rev: {{ ttrss.version }}
     - target: {{ ttrss.directory }}
+    - force_reset: True
     - require:
       - pkg: ttrss-git
 
